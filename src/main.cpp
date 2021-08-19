@@ -2,61 +2,25 @@
 #include <utility>
 #include <vector>
 #include <chrono>
-#include "simulator_includes.h"
+#include "include/simulator_includes.h"
 //#include <thread>
 
 void DevWork();
 void thread_test();
-space::Object CreateObject(int x, int y, int mass, int velocity, std::string name);
 
 // test code here, main() measures run time
 void DevWork()
 {
-    //std::vector<space::Object> objects;
-    //CreateObjects(objects);
     const double AU = 1.496e11;
 
-    space::universe<space::Object> universe;
+    space::list<space::sObject> universe;
+    universe.add(space::sObject(10, 10, 10, 10, "a"));
+    universe.add(space::sObject(20, 20, 20, 10, "b"));
+    universe.add(space::sObject(-30, 30, 30, 10, "c"));
 
 
-    universe.add(CreateObject(10, 10, 10, 10, "a"));
-    universe.add(CreateObject(20, 20, 20, 10, "b"));
-    universe.add(CreateObject(-30, 30, 30, 10, "c"));
-    //universe.add(CreateObject(10, 10, 10, 10, "d"));
-    //universe.add(CreateObject(10, 10, 10, 10, "e"));
-    //universe.add(CreateObject(10, 10, 10, 10, "f"));
-
-    space::QuadTree tree(universe);
-
-    /*
-    this->PrintChildren(this->root);
-    this->PrintChildren(this->root->top_left);
-    this->PrintChildren(this->root->top_left->top_right);
-    this->PrintChildren(this->root->top_right);*/
-    //tree.PrintChildren(tree.root);
-    //tree.PrintChildren(tree.root->top_right);
-    //tree.PrintChildren(tree.root->top_left->top_right);
-
+    //space::Quadtree tree(universe);
 }
-
-// copy elision, copy constructor not ran, use optimization when compiling
-space::Object CreateObject(int x, int y, int mass, int velocity, std::string name) {
-    return space::Object(x, y, mass, velocity, std::move(name));
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 int main() 
@@ -72,8 +36,7 @@ int main()
     auto stop = std::chrono::high_resolution_clock::now();
     auto ms = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
 
-    std::cout << std::endl << "Execution Time: " << ms.count() / 1e6 << " ms";
-    //std::cin.get();
+    //std::cout << std::endl << "Execution Time: " << ms.count() / 1e6 << " ms";
 }
 
 /*

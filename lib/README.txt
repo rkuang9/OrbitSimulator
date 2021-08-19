@@ -1,1 +1,0 @@
-Here goes wxwidgets library compiled as static release. If static debug, dynamic release, dynamic debug, monolithic, etc, modify the CMakeLists.txt accordingly.

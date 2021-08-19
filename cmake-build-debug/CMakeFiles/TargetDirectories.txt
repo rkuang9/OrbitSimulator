@@ -1,3 +1,0 @@
-C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir
-C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

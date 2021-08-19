@@ -5,10 +5,10 @@
 #ifndef INCLUDES_H
 #define INCLUDES_H
 
-#include "models/hpp/quadtree.h"
-#include "init_universe.cpp"
+#include "include/barnes-hut/quadtree.hpp"
+#include "src/init_universe.cpp"
 #include <cmath>
-#include "include/list.h"
-#include "models/hpp/object.h"
+#include "include/list.hpp"
+#include "include/barnes-hut/object.hpp"
 
 #endif //INCLUDES_H

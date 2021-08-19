@@ -2,19 +2,19 @@
 // Created by Macross on 2/14/2021.
 //
 
-#include "include/barnes-hut/object.h"
+#include "include/barnes-hut/object.hpp"
 #include <cmath>
 
 
 namespace space {
-    object::object() = default;
+    sObject::sObject() = default;
 
     /*Object::Object(const Object &copy_object) {
 
     }*/
 
 
-    object::object(double x, double y, double mass, double velocity, std::string name) {
+    sObject::sObject(double x, double y, double mass, double velocity, std::string name) {
         this->x = x;
         this->y = y;
         this->mass = mass;
@@ -27,8 +27,8 @@ namespace space {
 
 
     // center of mass (copy) constructor
-    object::object(const object &object) {
-        //std::cout << "copy ran??? it's not supposed to wtf" << std::endl;
+    sObject::sObject(const sObject &object) {
+        std::cout << "copy ran\n";
         this->x = object.x;
         this->y = object.y;
         this->mass = object.mass;
@@ -36,28 +36,29 @@ namespace space {
     }
 
 
-    void object::COM(const object &object) {
+    void sObject::COM(const sObject &object) {
         this->x = object.x;
         this->y = object.y;
         this->mass = object.mass;
         this->is_com = true;
+        this->name = "COM mass " + std::to_string(this->mass);
     }
 
 
-    double object::GetForce(const object &other_object) const {
+    double sObject::GetForce(const sObject &other_object) const {
         this->velocity;//Force = G * m1 * m2/ r^2
         return 0;
     }
 
 
-    double object::GetDistance(const object &other_object) const {
+    double sObject::GetDistance(const sObject &other_object) const {
         return sqrt((this->y - other_object.GetY()) * (this->y - other_object.GetY()) +
                     (this->x - other_object.GetX()) * (this->x - other_object.GetX()));
     }
 
 
     // set radius, also set volume assuming all objects are approximately a sphere
-    void object::SetRadius(double _radius) {
+    void sObject::SetRadius(double _radius) {
         this->radius = _radius;
         this->volume = 4 * M_PI * this->radius * this->radius * this->radius / 3;
 
@@ -72,7 +73,7 @@ namespace space {
      * @param other_object     the other object in which to calculate the Roche Limit with
      * @return double,         Roche Limit distance in meters
      */
-    double object::RocheLimit(const object &other_object) const {
+    double sObject::RocheLimit(const sObject &other_object) const {
         double larger_mass_radius;
         double larger_mass_density;
         double smaller_mass_density;
@@ -91,7 +92,7 @@ namespace space {
     }
 
 
-    void object::UpdateCOM(object &object) {
+    void sObject::UpdateCOM(sObject &object) {
         if (!this->is_com) {
             return;
         }
@@ -100,38 +101,39 @@ namespace space {
         this->x = (this->x * this->mass + object.GetX() * object.GetMass()) / total_mass;
         this->y = (this->y * this->mass + object.GetY() * object.GetMass()) / total_mass;
         this->mass = total_mass;
+        this->name = "COM mass " + std::to_string(this->mass);
     }
 
 
     // destructor
-    object::~object() = default;
+    sObject::~sObject() = default;
 
 
-    double object::GetX() const {
+    double sObject::GetX() const {
         return this->x;
     }
 
-    double object::GetY() const {
+    double sObject::GetY() const {
         return this->y;
     }
 
-    double object::GetMass() const {
+    double sObject::GetMass() const {
         return this->mass;
     }
 
-    bool object::IsCOM() const {
+    bool sObject::IsCOM() const {
         return this->is_com;
     }
 
     // display object's physical properties
-    void object::display() const {
+    void sObject::display() const {
         std::cout << "\nPosition: (" << this->x << ", " << this->y << ")\n";
         std::cout << "Radius: " << this->radius << "\n";
         std::cout << "Velocity: " << this->velocity << "\n";
         std::cout << "Acceleration: " << this->acceleration << "\n";
     }
 
-    std::string object::GetName() const {
+    std::string sObject::GetName() const {
         return this->name;
     }
 
@@ -141,7 +143,7 @@ namespace space {
      * @param object
      * @return boolean,   TRUE if the object is identical in physical properties, else FALSE
      */
-    bool object::operator==(const object &object) const {
+    bool sObject::operator==(const sObject &object) const {
         return object.name == this->name &&
                object.mass == this->mass &&
                object.radius == this->radius &&

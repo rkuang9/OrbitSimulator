@@ -154,8 +154,13 @@ void UI::ShortcutAccelerators()
 }
 
 
+// parent window must be shown in order for logger to open
 void UI::OpenLogger(wxCommandEvent &event)
 {
+    if (!this->IsShown()) {
+        return;
+    }
+
     if (!this->logger) {
         this->logger = new Logger(this);
         this->logger->Show();

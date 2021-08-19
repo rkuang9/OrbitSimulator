@@ -1,7 +1,7 @@
 #include "include/ui/app.h"
-#include "include/list.h"
-#include "include/barnes-hut/object.h"
-#include "include/barnes-hut/quadtree.h"
+#include "include/list.hpp"
+#include "include/barnes-hut/object.hpp"
+#include "include/barnes-hut/quadtree.hpp"
 
 wxIMPLEMENT_APP(App);
 
@@ -61,8 +61,6 @@ bool App::OnInit()
 {
 	frame = new UI(wxPoint(30, 30), wxSize(640, 360));
 	frame->Show();
-	wxCommandEvent test = NULL;
-	frame->OpenLogger(test);
 	return true;
 }
 

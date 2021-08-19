@@ -4,7 +4,7 @@
 
 #ifndef SIMULATOR_INITIALIZEOBJECTS_CPP
 #define SIMULATOR_INITIALIZEOBJECTS_CPP
-
+/*
 #include <vector>
 #include "include/barnes-hut/object.h"
 
@@ -26,7 +26,7 @@ void CreateObjects(std::vector<space::object> &objects)
     objects.emplace_back(space::object(19.18 * AU, 7, 8.680e25, 6.80e6, "Uranus"));
     objects.emplace_back(space::object(30.06 * AU, 8, 1.020e26, 5.40e6, "Neptune"));
     objects.push_back(space::object(39.53 * AU, 9, 1.460e22, 4.70e6, "Pluto"));
-}
+}*/
 
 #endif //SIMULATORIN_ITIALIZEOBJECTS_CPP
 
