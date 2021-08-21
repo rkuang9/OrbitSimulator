@@ -19,56 +19,105 @@ namespace space
 {
     class sQuadrant
     {
+
     private:
         sQuadrant *parent = nullptr;
 
-        sQuadrant *northwest = nullptr;
-        sQuadrant *northeast = nullptr;
-        sQuadrant *southwest = nullptr;
-        sQuadrant *southeast = nullptr;
 
-        sObject *northwest_object = nullptr;
-        sObject *northeast_object = nullptr;
-        sObject *southwest_object = nullptr;
-        sObject *southeast_object = nullptr;
+        // an array of 4, each representing the 4 possible quadrants
+        sQuadrant *quadrant[4] = {nullptr};
+        sObject *object[4] = {nullptr};
 
         // top left coordinate of the quadrant
-        sPoint top_left = sPoint();
+        sPoint center;
 
         // length of the sqare quadrant
-        double length = 0;
+        double length = NAN;
+        double quarter_length = NAN;
 
     public:
-        sQuadrant(sPoint top_left_point, double quadrant_length, sQuadrant *parent);
+        sQuadrant(sPoint center, double quadrant_length, sQuadrant *parent);
 
-        void SetObjectNW(sObject &object);
+        double GetLength();
 
-        void SetObjectNE(sObject &object);
+        sPoint GetPoint();
 
-        void SetObjectSW(sObject &object);
+        sQuadrant *GetParent();
 
-        void SetObjectSE(sObject &object);
+        bool IsEmpty();
 
-        sObject *GetObjectNW();
+        bool IsEmpty(int quadrant);
 
-        sObject *GetObjectNE();
+        sObject *GetObject(int quadrant);
 
-        sObject *GetObjectSW();
+        void SetObject(sObject &object, int quadrant);
 
-        sObject *GetObjectSE();
+        sObject *RemoveObject(int quadrant);
 
-        sQuadrant *NewSubQuadrantNW();
 
-        sQuadrant *NewSubQuadrantNE();
+        sQuadrant *NewSubQuadrant(int quadrant);
 
-        sQuadrant *NewSubQuadrantSW();
-
-        sQuadrant *NewSubQuadrantSE();
-
-        double GetWidth();
-
-        double GetHeight();
     };
 }
 
 #endif //ORBITSIMULATOR_QUADRANT_HPP
+
+
+
+/*
+
+sObject *northwest_object = nullptr;
+sObject *northeast_object = nullptr;
+sObject *southwest_object = nullptr;
+sObject *southeast_object = nullptr;
+
+
+sQuadrant *northwest = nullptr;
+sQuadrant *northeast = nullptr;
+sQuadrant *southwest = nullptr;
+sQuadrant *southeast = nullptr;
+
+sObject *RemoveObjectNW();
+
+sObject *RemoveObjectNE();
+
+sObject *RemoveObjectSW();
+
+sObject *RemoveObjectSE();
+
+
+sQuadrant *NewSubQuadrantNW();
+
+sQuadrant *NewSubQuadrantNE();
+
+sQuadrant *NewSubQuadrantSW();
+
+sQuadrant *NewSubQuadrantSE();
+
+
+bool IsEmptyNW();
+
+bool IsEmptyNE();
+
+bool IsEmptySW();
+
+bool IsEmptySE();
+
+
+void SetObjectNW(sObject &object);
+
+void SetObjectNE(sObject &object);
+
+void SetObjectSW(sObject &object);
+
+void SetObjectSE(sObject &object);
+
+
+sObject *GetObjectNW();
+
+sObject *GetObjectNE();
+
+sObject *GetObjectSW();
+
+sObject *GetObjectSE();
+ */

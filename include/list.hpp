@@ -1,6 +1,7 @@
 #ifndef ORBITSIMULATOR_LIST_HPP
 #define ORBITSIMULATOR_LIST_HPP
 
+#include <iostream>
 
 /**
  * A singly-linked list version of STL's list class

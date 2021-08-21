@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 
+#include "include/barnes-hut/point.hpp"
 
 namespace space {
     struct ObjectProperties {
@@ -20,6 +21,7 @@ namespace space {
 
     class sObject {
     public:
+        sPoint point;
         ObjectProperties properties;
         double x = NAN, y = NAN;
         double mass = NAN;        // kg

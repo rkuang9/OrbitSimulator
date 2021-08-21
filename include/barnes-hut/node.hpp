@@ -29,9 +29,6 @@ namespace space {
         // convert object to center of mass, returns a copy of former object
         space::sObject ConvertToCom();
 
-        // convert object to center of mass along with an (inserting) object
-        // returns a copy of former object
-        space::sObject ConvertToCom(space::sObject &object);
 
     };
 }

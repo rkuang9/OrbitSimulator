@@ -26,10 +26,4 @@ namespace space
         return this->northeast == nullptr && this->northwest == nullptr &&
                this->southwest == nullptr && this->southeast == nullptr;
     }
-
-    space::sObject Node::ConvertToCom()
-    {
-
-    }
-
 }

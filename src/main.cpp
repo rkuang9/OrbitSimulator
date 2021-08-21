@@ -18,7 +18,6 @@ void DevWork()
     universe.add(space::sObject(20, 20, 20, 10, "b"));
     universe.add(space::sObject(-30, 30, 30, 10, "c"));
 
-
     //space::Quadtree tree(universe);
 }
 
