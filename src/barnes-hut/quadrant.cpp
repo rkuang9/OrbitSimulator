@@ -35,7 +35,7 @@ namespace space
 
     bool sQuadrant::IsEmpty()
     {
-        for (auto & i : this->object) {
+        for (auto &i : this->object) {
             if (i != nullptr) {
                 return false;
             }
@@ -45,52 +45,52 @@ namespace space
     }
 
 
-    bool sQuadrant::IsEmpty(int _quadrant)
+    bool sQuadrant::IsEmpty(int subquadrant)
     {
-        return this->object[_quadrant] == nullptr;
+        return this->object[subquadrant] == nullptr;
     }
 
 
-    sObject *sQuadrant::GetObject(int _quadrant)
+    sObject &sQuadrant::GetObject(int subquadrant)
     {
         // need to check that _quadrant is between 0 and 4?
-        return this->object[_quadrant];
+        return *this->object[subquadrant];
     }
 
 
-    void sQuadrant::SetObject(sObject &object, int _quadrant)
+    void sQuadrant::SetObject(sObject &_object, int subquadrant)
     {
-        this->object[_quadrant] = &object;
+        this->object[subquadrant] = &_object;
     }
 
 
-    sObject *sQuadrant::RemoveObject(int _quadrant)
+    sObject &sQuadrant::RemoveObject(int subquadrant)
     {
-        sObject *temp = this->object[_quadrant];
-        this->object[_quadrant] = nullptr;
+        sObject &temp = *this->object[subquadrant];
+        this->object[subquadrant] = nullptr;
         return temp;
     }
 
 
-    sQuadrant *sQuadrant::NewSubQuadrant(int _quadrant)
+    sQuadrant *sQuadrant::NewSubQuadrant(int subquadrant)
     {
         sPoint point{};
 
-        if (_quadrant == NORTH_WEST) {
+        if (subquadrant == NORTH_WEST) {
             point.SetXY(this->center.x - this->quarter_length, this->center.y + quarter_length);
         }
-        else if (_quadrant == NORTH_EAST) {
+        else if (subquadrant == NORTH_EAST) {
             point.SetXY(this->center.x + this->quarter_length, this->center.y + quarter_length);
         }
-        else if (_quadrant == SOUTH_WEST) {
+        else if (subquadrant == SOUTH_WEST) {
             point.SetXY(this->center.x - this->quarter_length, this->center.y - quarter_length);
         }
         else { // SOUTH_EAST
             point.SetXY(this->center.x + this->quarter_length, this->center.y - quarter_length);
         }
 
-        this->quadrant[_quadrant] = new sQuadrant(point, this->length / 2, this);
-        return this->quadrant[_quadrant];
+        this->quadrant[subquadrant] = new sQuadrant(point, this->length / 2, this);
+        return this->quadrant[subquadrant];
     }
 }
 

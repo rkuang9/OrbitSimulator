@@ -21,10 +21,10 @@ namespace space
     {
 
     private:
+        // a pointer to the parent quadrant of which this is a subquadrant of
         sQuadrant *parent = nullptr;
 
-
-        // an array of 4, each representing the 4 possible quadrants
+        // each element representing the 4 possible quadrants objects contained within
         sQuadrant *quadrant[4] = {nullptr};
         sObject *object[4] = {nullptr};
 
@@ -36,26 +36,71 @@ namespace space
         double quarter_length = NAN;
 
     public:
+        /**
+         * Constructor, sets the quadrant center, length, and parent quadrant
+         * @param center            an sPoint, the center of this quadrant
+         * @param quadrant_length   length of this quadrant
+         * @param parent            parent of the quadrant to which this is subquadrant of
+         */
         sQuadrant(sPoint center, double quadrant_length, sQuadrant *parent);
 
+        /**
+         * @return   the quadrant's length
+         */
         double GetLength();
 
+        /**
+         * @return   the qudrant's sPoint, the center
+         */
         sPoint GetPoint();
 
+        /**
+         * @return   a pointer to the quadrant's parent
+         */
         sQuadrant *GetParent();
 
+        /**
+         * Check that a qudrant does not contain any objects
+         * @return
+         */
         bool IsEmpty();
 
+        /**
+         * Check that a sub-quadrant does not contain an sObject
+         *
+         * @param quadrant
+         * @return   TRUE if sub-quadrant is empty, FALSE if contains an sObject
+         */
         bool IsEmpty(int quadrant);
 
-        sObject *GetObject(int quadrant);
+        /**
+         * Get the sObject from a quadrant
+         * @param quadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST,or SOUTH_EAST
+         * @return   a reference to the sub-quadrant's object
+         */
+        sObject &GetObject(int subquadrant);
 
-        void SetObject(sObject &object, int quadrant);
+        /**
+         * Add an sObject to a sub-quadrant
+         * @param object   object to insert
+         * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST,or SOUTH_EAST
+         */
+        void SetObject(sObject &object, int subquadrant);
 
-        sObject *RemoveObject(int quadrant);
+        /**
+         * Remove an sObject from its quadrant return its location
+         *
+         * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST, or SOUTH_EAST
+         * @return   a reference to the object
+         */
+        sObject &RemoveObject(int subquadrant);
 
-
-        sQuadrant *NewSubQuadrant(int quadrant);
+        /**
+         * Subdivide a sub-quadrant
+         * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST, or SOUTH_EAST
+         * @return   a pointer to the quadrant which contains the new sub-quadrants
+         */
+        sQuadrant *NewSubQuadrant(int subquadrant);
 
     };
 }

@@ -26,7 +26,7 @@ namespace space
         // if an object already exists in the subquadrant, recursively divide and insert to it
         else {
             this->current = this->current->NewSubQuadrant(insert_quadrant);
-            this->Insert(*this->current->GetParent()->RemoveObject(insert_quadrant));
+            this->Insert(this->current->GetParent()->RemoveObject(insert_quadrant));
             this->Insert(object);
         }
     }

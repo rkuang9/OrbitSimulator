@@ -9,7 +9,7 @@ namespace space
 {
     const double AU = 1.496e11;
 
-    enum
+    enum quadrant
     {
         NORTH_WEST = 0,
         NORTH_EAST = 1,
