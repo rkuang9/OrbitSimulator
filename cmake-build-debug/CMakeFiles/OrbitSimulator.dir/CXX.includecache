@@ -56,10 +56,6 @@ vector
 include/barnes-hut/object.h
 ../src/include/barnes-hut/object.h
 
-C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadtree.cpp
-include/barnes-hut/quadtree.hpp
-C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/include/barnes-hut/quadtree.hpp
-
 C:/Users/Macross/Desktop/OrbitSimulator/src/main.cpp
 iostream
 -

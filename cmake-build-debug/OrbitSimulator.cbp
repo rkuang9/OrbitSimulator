@@ -122,9 +122,6 @@
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadtree.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
-		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/exception.cpp">
-			<Option target="OrbitSimulator"/>
-		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/init_universe.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>

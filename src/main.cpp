@@ -1,6 +1,4 @@
 #include <iostream>
-#include <utility>
-#include <vector>
 #include <chrono>
 #include "include/simulator_includes.h"
 
@@ -16,18 +14,23 @@ void DevWork()
     using namespace space;
     using namespace space::constants;
 
+    list<sObject *> universe;
 
-
-    list<sObject*> universe;
-
-    universe.add(new sObject(sPoint(10, 10), 111, 10, "1010"));
-    universe.add(new sObject(sPoint(40, 40), 444, 10, "4040"));
-    universe.add(new sObject(sPoint(30, 30), 333, 10, "3030"));
-    universe.add(new sObject(sPoint(20, 20), 222, 10, "2020"));
+    universe.add(new sObject(sPoint(10, 10), 111, 10, "NE->SW->SW"));
+    universe.add(new sObject(sPoint(40, 40), 444, 10, "NE->NE->NE"));
+    universe.add(new sObject(sPoint(30, 30), 333, 10, "NE->NE->SW"));
+    universe.add(new sObject(sPoint(20, 20), 222, 10, "NE->SW->NE"));
 
     space::sQuadtree quadtree(universe);
 
-    std::cout << quadtree.GetRoot()->GetObject()->GetMass();
+    sQuadrant *object = quadtree.GetRoot()->GetQuadrant(NORTH_EAST)
+            ->GetQuadrant(NORTH_EAST)
+            ->GetQuadrant(SOUTH_WEST);
+
+    std::cout << "printing object in north-east, north-east, south-western quadrant, point (30, 30), mass 333:\n";
+    std::cout << object->GetObject()->GetPoint().GetCoordinateString() << "\n";
+    std::cout << object->GetObject()->GetMass() << "\n";
+    std::cout << object->GetObject()->GetName() << "\n";
 }
 
 

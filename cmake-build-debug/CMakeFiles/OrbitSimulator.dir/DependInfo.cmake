@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/point.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
   "C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadrant.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj"
   "C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadtree.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.obj"
-  "C:/Users/Macross/Desktop/OrbitSimulator/src/exception.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/exception.cpp.obj"
   "C:/Users/Macross/Desktop/OrbitSimulator/src/init_universe.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.obj"
   "C:/Users/Macross/Desktop/OrbitSimulator/src/main.cpp" "C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/OrbitSimulator.dir/src/main.cpp.obj"
   )

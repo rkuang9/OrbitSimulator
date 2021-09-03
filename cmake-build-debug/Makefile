@@ -248,30 +248,6 @@ src/barnes-hut/quadtree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.s
 .PHONY : src/barnes-hut/quadtree.cpp.s
 
-src/exception.obj: src/exception.cpp.obj
-.PHONY : src/exception.obj
-
-# target to build an object file
-src/exception.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/exception.cpp.obj
-.PHONY : src/exception.cpp.obj
-
-src/exception.i: src/exception.cpp.i
-.PHONY : src/exception.i
-
-# target to preprocess a source file
-src/exception.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/exception.cpp.i
-.PHONY : src/exception.cpp.i
-
-src/exception.s: src/exception.cpp.s
-.PHONY : src/exception.s
-
-# target to generate assembly for a file
-src/exception.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/exception.cpp.s
-.PHONY : src/exception.cpp.s
-
 src/init_universe.obj: src/init_universe.cpp.obj
 .PHONY : src/init_universe.obj
 
@@ -344,9 +320,6 @@ help:
 	@echo ... src/barnes-hut/quadtree.obj
 	@echo ... src/barnes-hut/quadtree.i
 	@echo ... src/barnes-hut/quadtree.s
-	@echo ... src/exception.obj
-	@echo ... src/exception.i
-	@echo ... src/exception.s
 	@echo ... src/init_universe.obj
 	@echo ... src/init_universe.i
 	@echo ... src/init_universe.s

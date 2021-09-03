@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.obj"
-  "CMakeFiles/OrbitSimulator.dir/src/exception.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/main.cpp.obj"
   "libOrbitSimulator.dll.a"

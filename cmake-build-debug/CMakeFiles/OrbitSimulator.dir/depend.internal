@@ -25,9 +25,6 @@ CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.obj
  ../include/barnes-hut/quadtree.hpp
  ../include/list.hpp
  C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadtree.cpp
-CMakeFiles/OrbitSimulator.dir/src/exception.cpp.obj
- ../include/exception.hpp
- C:/Users/Macross/Desktop/OrbitSimulator/src/exception.cpp
 CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.obj
  C:/Users/Macross/Desktop/OrbitSimulator/src/init_universe.cpp
 CMakeFiles/OrbitSimulator.dir/src/main.cpp.obj
