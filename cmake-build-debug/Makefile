@@ -128,30 +128,6 @@ OrbitSimulator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/build
 .PHONY : OrbitSimulator/fast
 
-src/barnes-hut/node.obj: src/barnes-hut/node.cpp.obj
-.PHONY : src/barnes-hut/node.obj
-
-# target to build an object file
-src/barnes-hut/node.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj
-.PHONY : src/barnes-hut/node.cpp.obj
-
-src/barnes-hut/node.i: src/barnes-hut/node.cpp.i
-.PHONY : src/barnes-hut/node.i
-
-# target to preprocess a source file
-src/barnes-hut/node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.i
-.PHONY : src/barnes-hut/node.cpp.i
-
-src/barnes-hut/node.s: src/barnes-hut/node.cpp.s
-.PHONY : src/barnes-hut/node.s
-
-# target to generate assembly for a file
-src/barnes-hut/node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.s
-.PHONY : src/barnes-hut/node.cpp.s
-
 src/barnes-hut/object.obj: src/barnes-hut/object.cpp.obj
 .PHONY : src/barnes-hut/object.obj
 
@@ -305,9 +281,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... OrbitSimulator
-	@echo ... src/barnes-hut/node.obj
-	@echo ... src/barnes-hut/node.i
-	@echo ... src/barnes-hut/node.s
 	@echo ... src/barnes-hut/object.obj
 	@echo ... src/barnes-hut/object.i
 	@echo ... src/barnes-hut/object.s

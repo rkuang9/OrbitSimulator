@@ -22,7 +22,6 @@ set(SRC_FILES "include/simulator_includes.h"
         #src/ui/app.cpp include/ui/app.h
         #src/ui/ui.cpp include/ui/ui.h
         #src/ui/logger.cpp include/ui/logger.h
-        src/barnes-hut/node.cpp include/barnes-hut/node.hpp
         src/barnes-hut/quadrant.cpp include/barnes-hut/quadrant.hpp
         src/barnes-hut/point.cpp include/barnes-hut/point.hpp
         )

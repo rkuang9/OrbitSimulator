@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../bin/OrbitSimulator.exe"
   "../bin/OrbitSimulator.exe.manifest"
   "../bin/OrbitSimulator.pdb"
-  "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/object.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
   "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj"

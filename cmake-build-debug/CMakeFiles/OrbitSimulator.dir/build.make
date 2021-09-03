@@ -121,24 +121,10 @@ CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\quadtree.cpp -o CMakeFiles\OrbitSimulator.dir\src\barnes-hut\quadtree.cpp.s
 
-CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj: CMakeFiles/OrbitSimulator.dir/flags.make
-CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj: CMakeFiles/OrbitSimulator.dir/includes_CXX.rsp
-CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj: ../src/barnes-hut/node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OrbitSimulator.dir\src\barnes-hut\node.cpp.obj -c C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\node.cpp
-
-CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\node.cpp > CMakeFiles\OrbitSimulator.dir\src\barnes-hut\node.cpp.i
-
-CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\node.cpp -o CMakeFiles\OrbitSimulator.dir\src\barnes-hut\node.cpp.s
-
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj: CMakeFiles/OrbitSimulator.dir/flags.make
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj: CMakeFiles/OrbitSimulator.dir/includes_CXX.rsp
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj: ../src/barnes-hut/quadrant.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OrbitSimulator.dir\src\barnes-hut\quadrant.cpp.obj -c C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\quadrant.cpp
 
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.i: cmake_force
@@ -152,7 +138,7 @@ CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.s: cmake_force
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj: CMakeFiles/OrbitSimulator.dir/flags.make
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj: CMakeFiles/OrbitSimulator.dir/includes_CXX.rsp
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj: ../src/barnes-hut/point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\OrbitSimulator.dir\src\barnes-hut\point.cpp.obj -c C:\Users\Macross\Desktop\OrbitSimulator\src\barnes-hut\point.cpp
 
 CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.i: cmake_force
@@ -169,7 +155,6 @@ OrbitSimulator_OBJECTS = \
 "CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.obj" \
 "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/object.cpp.obj" \
 "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.obj" \
-"CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj" \
 "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj" \
 "CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj"
 
@@ -180,14 +165,13 @@ OrbitSimulator_EXTERNAL_OBJECTS =
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.obj
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/barnes-hut/object.cpp.obj
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadtree.cpp.obj
-../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/barnes-hut/node.cpp.obj
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/barnes-hut/quadrant.cpp.obj
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/src/barnes-hut/point.cpp.obj
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/build.make
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/linklibs.rsp
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/objects1.rsp
 ../bin/OrbitSimulator.exe: CMakeFiles/OrbitSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ..\bin\OrbitSimulator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ..\bin\OrbitSimulator.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OrbitSimulator.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -86,9 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/node.hpp">
-			<Option target="OrbitSimulator"/>
-		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/object.hpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
@@ -105,9 +102,6 @@
 			<Option target="OrbitSimulator"/>
 		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/simulator_includes.h">
-			<Option target="OrbitSimulator"/>
-		</Unit>
-		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/node.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/object.cpp">
