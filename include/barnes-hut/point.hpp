@@ -5,11 +5,17 @@
 #ifndef ORBITSIMULATOR_POINT_HPP
 #define ORBITSIMULATOR_POINT_HPP
 
+#include <iostream>
+
 namespace space
 {
-    const double AU = 1.496e11;
+    namespace constants
+    {
+        const double AU = 1.496e11;
+        const double ly = 9.461e15;
+    }
 
-    enum quadrant
+    enum Quadrant
     {
         NORTH_WEST = 0,
         NORTH_EAST = 1,
@@ -17,12 +23,15 @@ namespace space
         SOUTH_EAST = 3,
     };
 
-    struct sPoint
+    class sPoint
     {
+    public:
+        double x;
+        double y;
 
-        double x, y;
+        sPoint();
 
-        sPoint() = default;
+        sPoint(const sPoint &point) = default;
 
         sPoint(double x, double y);
 
@@ -36,9 +45,13 @@ namespace space
 
         void SetXY(double x, double y);
 
-        int Compare(sPoint target_point);
+        int Compare(const sPoint &target_point) const;
 
-        double DistanceTo(sPoint point);
+        double DistanceTo(const sPoint &point);
+
+        bool IsValid() const;
+
+        std::string GetCoordinateString() const;
     };
 }
 

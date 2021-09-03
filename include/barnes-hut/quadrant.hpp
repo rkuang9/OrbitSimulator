@@ -15,25 +15,28 @@
  *
  */
 
-namespace space
-{
-    class sQuadrant
-    {
+namespace space {
+    class sQuadrant {
 
-    private:
+    public:
+        std::string test = "";
         // a pointer to the parent quadrant of which this is a subquadrant of
         sQuadrant *parent = nullptr;
 
         // each element representing the 4 possible quadrants objects contained within
         sQuadrant *quadrant[4] = {nullptr};
-        sObject *object[4] = {nullptr};
 
-        // top left coordinate of the quadrant
+        //sObject *object[4] = {nullptr};
+        sObject *object = nullptr;
+
+        // center coordinate of the quadrant
         sPoint center;
 
         // length of the sqare quadrant
         double length = NAN;
         double quarter_length = NAN;
+
+        bool is_internal = false;
 
     public:
         /**
@@ -43,6 +46,9 @@ namespace space
          * @param parent            parent of the quadrant to which this is subquadrant of
          */
         sQuadrant(sPoint center, double quadrant_length, sQuadrant *parent);
+
+        // need to make sure this never runs
+        sQuadrant(const sQuadrant &copy) = default;
 
         /**
          * @return   the quadrant's length
@@ -57,47 +63,53 @@ namespace space
         /**
          * @return   a pointer to the quadrant's parent
          */
-        sQuadrant *GetParent();
+        sQuadrant GetParent();
 
         /**
          * Check that a qudrant does not contain any objects
-         * @return
+         * @return   TRUE if quadrant is empty, FALSE if quadrant contains an object
          */
         bool IsEmpty();
 
         /**
-         * Check that a sub-quadrant does not contain an sObject
-         *
-         * @param quadrant
-         * @return   TRUE if sub-quadrant is empty, FALSE if contains an sObject
+         * Check that a quadrant contains sub-quadrants, is an internal node (quadrant)
+         * @return
          */
-        bool IsEmpty(int quadrant);
+        bool IsInternal();
 
         /**
-         * Get the sObject from a quadrant
-         * @param quadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST,or SOUTH_EAST
-         * @return   a reference to the sub-quadrant's object
+         * Check that a quadrant does not have sub-quadrants, is an external node (quadrant)
+         * @return
          */
-        sObject &GetObject(int subquadrant);
+        bool IsExternal();
 
         /**
-         * Add an sObject to a sub-quadrant
+         * @param subquadrant    the sub-quadrant enum value
+         * @return   a pointer to the sub-quadrant
+         */
+        sQuadrant *GetQuadrant(int subquadrant);
+
+        /**
+         * Get the quadrant's object
+         * @return   a pointer to the quadrant's object
+         */
+        sObject *GetObject();
+
+        /**
+         * Add a heap allocated sObject to a sub-quadrant
          * @param object   object to insert
-         * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST,or SOUTH_EAST
          */
-        void SetObject(sObject &object, int subquadrant);
+        void SetObject(sObject &object);
 
         /**
          * Remove an sObject from its quadrant return its location
-         *
          * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST, or SOUTH_EAST
          * @return   a reference to the object
          */
-        sObject &RemoveObject(int subquadrant);
+        sObject& RemoveObject();
 
         /**
          * Subdivide a sub-quadrant
-         * @param subquadrant   enums NORTH_WEST, NORTH_EAST, SOUTH_WEST, or SOUTH_EAST
          * @return   a pointer to the quadrant which contains the new sub-quadrants
          */
         sQuadrant *NewSubQuadrant(int subquadrant);
@@ -106,63 +118,3 @@ namespace space
 }
 
 #endif //ORBITSIMULATOR_QUADRANT_HPP
-
-
-
-/*
-
-sObject *northwest_object = nullptr;
-sObject *northeast_object = nullptr;
-sObject *southwest_object = nullptr;
-sObject *southeast_object = nullptr;
-
-
-sQuadrant *northwest = nullptr;
-sQuadrant *northeast = nullptr;
-sQuadrant *southwest = nullptr;
-sQuadrant *southeast = nullptr;
-
-sObject *RemoveObjectNW();
-
-sObject *RemoveObjectNE();
-
-sObject *RemoveObjectSW();
-
-sObject *RemoveObjectSE();
-
-
-sQuadrant *NewSubQuadrantNW();
-
-sQuadrant *NewSubQuadrantNE();
-
-sQuadrant *NewSubQuadrantSW();
-
-sQuadrant *NewSubQuadrantSE();
-
-
-bool IsEmptyNW();
-
-bool IsEmptyNE();
-
-bool IsEmptySW();
-
-bool IsEmptySE();
-
-
-void SetObjectNW(sObject &object);
-
-void SetObjectNE(sObject &object);
-
-void SetObjectSW(sObject &object);
-
-void SetObjectSE(sObject &object);
-
-
-sObject *GetObjectNW();
-
-sObject *GetObjectNE();
-
-sObject *GetObjectSW();
-
-sObject *GetObjectSE();
- */

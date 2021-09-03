@@ -6,9 +6,9 @@
 
 namespace space
 {
-    sQuadrant::sQuadrant(sPoint center, double quadrant_length, sQuadrant *parent)
+    sQuadrant::sQuadrant(sPoint _center, double quadrant_length, sQuadrant *parent)
     {
-        this->center = center;
+        this->center = _center;
         this->length = quadrant_length;
         this->quarter_length = quadrant_length / 4;
         this->parent = parent;
@@ -27,229 +27,98 @@ namespace space
     }
 
 
-    sQuadrant *sQuadrant::GetParent()
+    sQuadrant sQuadrant::GetParent()
     {
-        return this->parent;
+        return *this->parent;
     }
 
 
     bool sQuadrant::IsEmpty()
     {
-        for (auto &i : this->object) {
-            if (i != nullptr) {
-                return false;
-            }
-        }
-
-        return true;
+        return this->object == nullptr;
     }
 
 
-    bool sQuadrant::IsEmpty(int subquadrant)
+    bool sQuadrant::IsInternal()
     {
-        return this->object[subquadrant] == nullptr;
+        return this->quadrant[NORTH_WEST] != nullptr ||
+               this->quadrant[NORTH_EAST] != nullptr ||
+               this->quadrant[SOUTH_WEST] != nullptr ||
+               this->quadrant[SOUTH_EAST] != nullptr;
     }
 
 
-    sObject &sQuadrant::GetObject(int subquadrant)
+    bool sQuadrant::IsExternal()
     {
-        // need to check that _quadrant is between 0 and 4?
-        return *this->object[subquadrant];
+        return this->quadrant[NORTH_WEST] == nullptr &&
+               this->quadrant[NORTH_EAST] == nullptr &&
+               this->quadrant[SOUTH_WEST] == nullptr &&
+               this->quadrant[SOUTH_EAST] == nullptr;
     }
 
 
-    void sQuadrant::SetObject(sObject &_object, int subquadrant)
+    sQuadrant *sQuadrant::GetQuadrant(int subquadrant)
     {
-        this->object[subquadrant] = &_object;
+        return this->quadrant[subquadrant];
     }
 
 
-    sObject &sQuadrant::RemoveObject(int subquadrant)
+    sObject *sQuadrant::GetObject()
     {
-        sObject &temp = *this->object[subquadrant];
-        this->object[subquadrant] = nullptr;
-        return temp;
+        // need to check that _quadrant is between 0 and 3?
+        return this->object;
+    }
+
+
+    void sQuadrant::SetObject(sObject &_object)
+    {
+        this->object = &_object;
+    }
+
+
+    sObject &sQuadrant::RemoveObject()
+    {
+        sObject *temp = this->object;
+        this->object = nullptr;
+        return *temp;
     }
 
 
     sQuadrant *sQuadrant::NewSubQuadrant(int subquadrant)
     {
-        sPoint point{};
+        if (this->object == nullptr) {
+            std::cout << "The current quadrant does not contain an object, a subquadrant was not created\n";
+        }
+
+        if (this->quadrant[subquadrant] != nullptr) {
+            std::cout << Quadrant(subquadrant) << " subquadrant already exists\n";
+        }
 
         if (subquadrant == NORTH_WEST) {
-            point.SetXY(this->center.x - this->quarter_length, this->center.y + quarter_length);
+            this->quadrant[subquadrant] = new sQuadrant(
+                    sPoint(this->center.GetX() - this->quarter_length, this->center.GetY() + quarter_length),
+                    this->length / 2,
+                    this);
         }
         else if (subquadrant == NORTH_EAST) {
-            point.SetXY(this->center.x + this->quarter_length, this->center.y + quarter_length);
+            this->quadrant[subquadrant] = new sQuadrant(
+                    sPoint(this->center.GetX() + this->quarter_length, this->center.GetY() + quarter_length),
+                    this->length / 2,
+                    this);
         }
         else if (subquadrant == SOUTH_WEST) {
-            point.SetXY(this->center.x - this->quarter_length, this->center.y - quarter_length);
+            this->quadrant[subquadrant] = new sQuadrant(
+                    sPoint(this->center.GetX() - this->quarter_length, this->center.GetY() - quarter_length),
+                    this->length / 2,
+                    this);
         }
         else { // SOUTH_EAST
-            point.SetXY(this->center.x + this->quarter_length, this->center.y - quarter_length);
+            this->quadrant[subquadrant] = new sQuadrant(
+                    sPoint(this->center.GetX() + this->quarter_length, this->center.GetY() - quarter_length),
+                    this->length / 2,
+                    this);
         }
 
-        this->quadrant[subquadrant] = new sQuadrant(point, this->length / 2, this);
         return this->quadrant[subquadrant];
     }
 }
-
-
-
-
-/*
-
-
-
-    bool sQuadrant::IsEmptyNW()
-    {
-        return this->northwest_object == nullptr;
-    }
-
-
-    bool sQuadrant::IsEmptyNE()
-    {
-        return this->northeast == nullptr;
-    }
-
-
-    bool sQuadrant::IsEmptySW()
-    {
-        return this->southwest == nullptr;
-    }
-
-
-    bool sQuadrant::IsEmptySE()
-    {
-        return this->southeast == nullptr;
-    }
-
-
-    sQuadrant *sQuadrant::NewSubQuadrantNW()
-    {
-        this->northwest = new sQuadrant(
-                sPoint(this->center.x - this->quarter_length, this->center.y + quarter_length),
-                this->length / 2,
-                this);
-        return this->northwest;
-    }
-
-
-    sQuadrant *sQuadrant::NewSubQuadrantNE()
-    {
-        this->northeast = new sQuadrant(
-                sPoint(this->center.x + this->quarter_length, this->center.y + quarter_length),
-                this->length / 2,
-                this);
-        return this->northeast;
-    }
-
-
-    sQuadrant *sQuadrant::NewSubQuadrantSW()
-    {
-        this->southwest = new sQuadrant(
-                sPoint(this->center.x - this->quarter_length, this->center.y - quarter_length),
-                this->length / 2,
-                this);
-        return this->southwest;
-    }
-
-
-    sQuadrant *sQuadrant::NewSubQuadrantSE()
-    {
-        this->southeast = new sQuadrant(
-                sPoint(this->center.x + this->quarter_length, this->center.y - quarter_length),
-                this->length / 2,
-                this);
-        return this->southeast;
-    }
-
-
-
-
-
-    void sQuadrant::SetObjectNW(sObject &object)
-    {
-        this->northwest_object = &object;
-    }
-
-
-    void sQuadrant::SetObjectNE(sObject &object)
-    {
-        this->northeast_object = &object;
-    }
-
-
-    void sQuadrant::SetObjectSW(sObject &object)
-    {
-        this->southwest_object = &object;
-    }
-
-
-    void sQuadrant::SetObjectSE(sObject &object)
-    {
-        this->southeast_object = &object;
-    }
-
-
-
-
-    sObject *sQuadrant::GetObjectNW()
-    {
-        return this->northwest_object;
-    }
-
-
-    sObject *sQuadrant::GetObjectNE()
-    {
-        return this->northeast_object;
-    }
-
-
-    sObject *sQuadrant::GetObjectSW()
-    {
-        return this->southwest_object;
-    }
-
-
-    sObject *sQuadrant::GetObjectSE()
-    {
-        return this->southeast_object;
-    }
-
-
-
-
-
-
-    sObject *sQuadrant::RemoveObjectNW()
-    {
-        sObject *temp = this->northwest_object;
-        this->northwest_object = nullptr;
-        return temp;
-    }
-
-
-    sObject *sQuadrant::RemoveObjectNE()
-    {
-        sObject *temp = this->northeast_object;
-        this->northeast_object = nullptr;
-        return temp;
-    }
-
-
-    sObject *sQuadrant::RemoveObjectSW()
-    {
-        sObject *temp = this->southwest_object;
-        this->southwest_object = nullptr;
-        return temp;
-    }
-
-
-    sObject *sQuadrant::RemoveObjectSE()
-    {
-        sObject *temp = this->southeast_object;
-        this->southeast_object = nullptr;
-        return temp;
-    }
- */

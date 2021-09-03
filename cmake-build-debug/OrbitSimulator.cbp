@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OrbitSimulator"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrbitSimulator">
+				<Option output="C:/Users/Macross/Desktop/OrbitSimulator/bin/OrbitSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrbitSimulator"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrbitSimulator/fast">
+				<Option output="C:/Users/Macross/Desktop/OrbitSimulator/bin/OrbitSimulator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrbitSimulator/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/node.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/object.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/point.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/quadrant.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/quadtree.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/list.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/simulator_includes.h">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/node.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/object.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/point.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadrant.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/quadtree.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/exception.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/init_universe.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/main.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

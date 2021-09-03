@@ -10,76 +10,66 @@
 
 #include "include/barnes-hut/point.hpp"
 
-namespace space {
-    struct ObjectProperties {
-        double x, y;
-        double velocity, velocity_x, velocity_y;
-        double accel, accel_x, accel_y;
-        double momentum, momentum_x, momentum_y;
-        double force, force_x, force_y;
-    };
-
-    class sObject {
+namespace space
+{
+    class sObject
+    {
     public:
         sPoint point;
-        ObjectProperties properties;
-        double x = NAN, y = NAN;
-        double mass = NAN;        // kg
-        double velocity = NAN;
         std::string name;
-        bool is_com = false;   // identifies object as center of mass object or a real object
 
-        double radius = NAN;
-        double volume = NAN;
-        double density = NAN;
-
-        double G_constant = 6.673e-11;
-
+        double mass = NAN;
+        double velocity = NAN;
+        double accel = NAN;
         double momentum = NAN;
-        double acceleration = NAN;
-        double force_x = NAN;
-        double force_y = NAN;
+        double force = NAN;
 
+        bool is_com = false;
+
+    public:
         // constructors, destructor
-        sObject();
+        sObject() = default;
 
-        // center of mass object
-        sObject(const sObject& object);
-
-        // initialize object constructor
-        sObject(double x, double y, double mass, double velocity, std::string name);
-
-        // create empty COM object
-        void COM(const sObject& object);
-
-        bool operator == (const sObject& object) const;
-
+        // copy constructor, should never run
+        sObject(const sObject &object) = default;
 
         // destructor
-        ~sObject();
+        ~sObject() = default;
+
+        // initialize object constructor
+        sObject(sPoint point, double mass, double velocity, std::string name);
+
+        // create empty COM object
+        sObject* CreateCOM(sObject &object);
+
+        // update a COM object
+        void UpdateCOM(sObject &object);
 
         // formulas
         double GetForce(const sObject &other_object) const;
-        double GetDistance(const sObject &other_object) const;
-        double RocheLimit(const sObject &other_object) const;
 
-        void UpdateCOM(sObject& object);
+        bool IsCOM();
 
-
-        
-
-        
-
-
-        void SetRadius(double radius);
-
-        // accessors
-        double GetX() const;
-        double GetY() const;
+        /** Getters and Setters */
         double GetMass() const;
+
         std::string GetName() const;
-        bool IsCOM() const;
-        void display() const;
+
+        double GetX();
+
+        double GetY();
+
+        void SetX(double x);
+
+        void SetY(double y);
+
+        void SetXY(double x, double y);
+
+        sPoint &GetPoint();
+
+        void SetPoint(sPoint &point);
+
+        void SetIsCOM(bool is_parent);
     };
 }
 #endif //SIMULATOR_OBJECT_H

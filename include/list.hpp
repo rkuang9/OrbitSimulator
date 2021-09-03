@@ -70,7 +70,7 @@ namespace space
 
         void pop_back();
 
-        int size();
+        int size() const;
 
         // multithread this
         listnode<T> *search(T &obj);
@@ -257,7 +257,7 @@ namespace space
 
 
     template<class T>
-    int list<T>::size()
+    int list<T>::size() const
     {
         return this->container_size;
     }

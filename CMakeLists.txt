@@ -11,7 +11,7 @@ add_compile_definitions(_USE_MATH_DEFINES)
 #elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	#set(BUILD "static-debug")
 #endif()
-
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 SET(CMAKE_BUILD_TYPE Release)
 set(SRC_FILES "include/simulator_includes.h"
         src/main.cpp
@@ -25,7 +25,7 @@ set(SRC_FILES "include/simulator_includes.h"
         src/barnes-hut/node.cpp include/barnes-hut/node.hpp
         src/barnes-hut/quadrant.cpp include/barnes-hut/quadrant.hpp
         src/barnes-hut/point.cpp include/barnes-hut/point.hpp
-        src/exception.cpp include/exception.hpp)
+        src/exception.cpp)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin) # compiled executable goes into /bin
 #set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib) # no use yet

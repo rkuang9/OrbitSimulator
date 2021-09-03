@@ -13,19 +13,33 @@
 
 namespace space
 {
-    class Quadtree
+    class sQuadtree
     {
     private:
-        int size = 0;
-        int height = 0;
-
         sQuadrant *root = nullptr;
         sQuadrant *current = nullptr;
 
+        int size = 0;
+        int height = 0;
+
+        void PointCurrentTo(sQuadrant *point_to);
+
+        void InsertInternal(sObject *new_object, int quadrant);
+
+        void InsertExternal(sObject *new_object, int quadrant);
+
+        void ClearQuadrant(int quadrant);
 
     public:
-        Quadtree();
-        void Insert(sObject &object);
+        sQuadtree();
+
+        sQuadtree(space::list<sObject *> &universe);
+
+        sQuadrant *GetRoot();
+
+        sQuadrant *GetCurrent();
+
+        void Insert(sObject *new_object);
     };
 }
 
