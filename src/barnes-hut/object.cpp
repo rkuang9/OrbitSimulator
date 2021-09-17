@@ -6,9 +6,11 @@
 #include <cmath>
 
 
-namespace space {
+namespace space
+{
 
-    sObject::sObject(sPoint _point, double mass, double velocity, std::string name) {
+    sObject::sObject(sPoint _point, double mass, double velocity, std::string name)
+    {
         this->point = _point;
         this->mass = mass;
         this->velocity = velocity;
@@ -17,7 +19,8 @@ namespace space {
     }
 
 
-    sObject* sObject::CreateCOM(sObject &object) {
+    sObject *sObject::CreateCOM(sObject &object)
+    {
         this->point = sPoint(object.GetPoint().GetX(), object.GetPoint().GetY());
         this->mass = object.mass;
         this->is_com = true;
@@ -25,38 +28,49 @@ namespace space {
     }
 
 
-    void sObject::UpdateCOM(sObject &object) {
+    void sObject::UpdateCOM(sObject &object)
+    {
         if (this->is_com) {
             this->mass += object.mass;
             this->point.SetX((this->GetX() * this->mass + object.GetX() * object.GetMass()) / this->mass);
             this->point.SetY((this->GetY() * this->mass + object.GetY() * object.GetMass()) / this->mass);
-        } else {
+        }
+        else {
             std::cout << "tried to update an object that is not com and failed\n";
         }
     }
 
 
-    double sObject::GetForce(const sObject &other_object) const {
-        this->velocity;//Force = G * m1 * m2/ r^2
-        // G = 6.673e-11;
-        return 0;
+    double sObject::GetForce(const sObject &other_object)
+    {
+        return space::constants::G * this->mass * other_object.mass /
+               pow(this->point.DistanceTo(other_object.point), 2);
     }
 
 
-    bool sObject::IsCOM() {
+    void sObject::UpdateForce(const sObject &other_object)
+    {
+        this->net_force += space::constants::G * this->mass * other_object.mass /
+                           pow(this->point.DistanceTo(other_object.point), 2);
+    }
+
+
+    bool sObject::IsCOM()
+    {
         return this->is_com;
     }
 
 
-    double sObject::GetMass() const {
+    double sObject::GetMass() const
+    {
         return this->mass;
     }
 
 
-    std::string sObject::GetName() const {
+    std::string sObject::GetName() const
+    {
         return this->name;
     }
-
 
 
     /** Getters and Setters */
@@ -69,6 +83,12 @@ namespace space {
     double sObject::GetY()
     {
         return this->point.GetY();
+    }
+
+
+    double sObject::GetNetForce()
+    {
+        return this->net_force;
     }
 
 
@@ -91,7 +111,7 @@ namespace space {
     }
 
 
-    sPoint& sObject::GetPoint()
+    sPoint &sObject::GetPoint()
     {
         // this is a reference return type so be careful when setting
         // another object's point

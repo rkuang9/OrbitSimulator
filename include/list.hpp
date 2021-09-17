@@ -4,7 +4,8 @@
 #include <iostream>
 
 /**
- * A singly-linked list version of STL's list class
+ * A singly-linked list version of std::list
+ * with array-like access
  */
 namespace space
 {
@@ -12,33 +13,33 @@ namespace space
     template<typename T>
     struct listnode
     {
-        T object;
+        T value;
         listnode *next = nullptr;
 
-        explicit listnode<T>(T &_object);
+        explicit listnode<T>(T &_value);
 
-        explicit listnode<T>(T *_object);
+        explicit listnode<T>(T *_value);
     };
 
 
     template<typename T>
-    listnode<T>::listnode(T &_object)
+    listnode<T>::listnode(T &_value)
     {
-        this->object = _object;
+        this->value = _value;
     }
 
 
     template<typename T>
-    listnode<T>::listnode(T *_object)
+    listnode<T>::listnode(T *_value)
     {
-        this->object = *_object;
+        this->value = *_value;
     }
 
 
     template<class T>
     class list
     {
-    private:
+    public:
         int current_index = 0;
         listnode<T> *search_ptr = nullptr;
         listnode<T> *tail = nullptr;
@@ -46,6 +47,7 @@ namespace space
         listnode<T> *current = nullptr;
 
         int container_size = 0;
+        void traverse(int index);
 
     public:
         list<T>();
@@ -54,15 +56,15 @@ namespace space
 
         T &operator[](int i);
 
-        void add(T obj);
+        void add(T value);
 
-        void add(T *obj);
+        void add(T *value);
 
-        void insert(T &obj);
+        void insert(T &value);
 
-        void traverse(int index);
 
-        void remove(T &obj);
+
+        void remove(T &value);
 
         void remove(int i);
 
@@ -73,7 +75,7 @@ namespace space
         int size() const;
 
         // multithread this
-        listnode<T> *search(T &obj);
+        listnode<T> *search(T &value);
     };
 }
 
@@ -100,11 +102,11 @@ namespace space
     T &list<T>::operator[](int i)
     {
         if (i > this->container_size - 1) {
-            throw std::out_of_range("[] overload index out of bounds");
+            throw std::out_of_range("[] index out of bounds");
         }
-        // target value is past the current pointer, it means
+        // if index value is past the current pointer, it means
         // we can traverse to it from the current position
-        if (i - this->current_index > 0) {
+        if (i > this->current_index) {
             this->traverse(i - this->current_index);
         }
             // otherwise we start traversing from the root
@@ -114,20 +116,20 @@ namespace space
         }
 
         this->current_index = i;
-        return this->current->object;
+        return this->current->value;
     }
 
 
     template<class T>
-    void list<T>::add(T obj)
+    void list<T>::add(T value)
     {
         if (this->head == nullptr) {
-            this->head = new listnode<T>(obj);
+            this->head = new listnode<T>(value);
             this->tail = this->head;
             this->current = this->head;
         }
         else {
-            this->tail->next = new listnode<T>(obj);
+            this->tail->next = new listnode<T>(value);
             this->tail = this->tail->next;
         }
 
@@ -136,16 +138,16 @@ namespace space
 
 
     template<class T>
-    void list<T>::add(T *obj)
+    void list<T>::add(T *value)
     {
         if (this->head == nullptr) {
-            this->head = new listnode<T>(obj);
+            this->head = new listnode<T>(value);
             this->tail = this->head;
             this->current = this->head;
         }
         else {
             this->tail = this->tail->next;
-            this->tail = new listnode<T>(obj);
+            this->tail = new listnode<T>(value);
         }
 
         this->container_size++;
@@ -154,12 +156,12 @@ namespace space
 
     /**
      * Add an object that's already created
-     * @param obj
+     * @param value
      */
     template<class T>
-    void list<T>::insert(T &obj)
+    void list<T>::insert(T &value)
     {
-        this->add(&obj);
+        this->add(&value);
     }
 
 
@@ -181,10 +183,10 @@ namespace space
 
     /**
      * Search for the object and remove it
-     * @param obj
+     * @param value
      */
     template<class T>
-    void list<T>::remove(T &obj)
+    void list<T>::remove(T &value)
     {
 
     }
@@ -208,7 +210,7 @@ namespace space
         this->current->next = this->current->next->next;
 
         //delete to_delete;
-        std::cout << "is it still here? " << is_it_still_there->object.name << std::endl;
+        std::cout << "is it still here? " << is_it_still_there->value.name << std::endl;
     }
 
 
@@ -250,7 +252,7 @@ namespace space
 
 
     template<class T>
-    listnode<T> *list<T>::search(T &obj)
+    listnode<T> *list<T>::search(T &value)
     {
         return this->current;
     }

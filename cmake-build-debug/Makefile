@@ -128,6 +128,30 @@ OrbitSimulator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/build
 .PHONY : OrbitSimulator/fast
 
+src/barnes-hut/barneshut.obj: src/barnes-hut/barneshut.cpp.obj
+.PHONY : src/barnes-hut/barneshut.obj
+
+# target to build an object file
+src/barnes-hut/barneshut.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/barneshut.cpp.obj
+.PHONY : src/barnes-hut/barneshut.cpp.obj
+
+src/barnes-hut/barneshut.i: src/barnes-hut/barneshut.cpp.i
+.PHONY : src/barnes-hut/barneshut.i
+
+# target to preprocess a source file
+src/barnes-hut/barneshut.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/barneshut.cpp.i
+.PHONY : src/barnes-hut/barneshut.cpp.i
+
+src/barnes-hut/barneshut.s: src/barnes-hut/barneshut.cpp.s
+.PHONY : src/barnes-hut/barneshut.s
+
+# target to generate assembly for a file
+src/barnes-hut/barneshut.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/barnes-hut/barneshut.cpp.s
+.PHONY : src/barnes-hut/barneshut.cpp.s
+
 src/barnes-hut/object.obj: src/barnes-hut/object.cpp.obj
 .PHONY : src/barnes-hut/object.obj
 
@@ -248,29 +272,101 @@ src/init_universe.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/init_universe.cpp.s
 .PHONY : src/init_universe.cpp.s
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+src/ui/app.obj: src/ui/app.cpp.obj
+.PHONY : src/ui/app.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/ui/app.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/app.cpp.obj
+.PHONY : src/ui/app.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/ui/app.i: src/ui/app.cpp.i
+.PHONY : src/ui/app.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/ui/app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/app.cpp.i
+.PHONY : src/ui/app.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/ui/app.s: src/ui/app.cpp.s
+.PHONY : src/ui/app.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/ui/app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/app.cpp.s
+.PHONY : src/ui/app.cpp.s
+
+src/ui/graphics_example.obj: src/ui/graphics_example.cpp.obj
+.PHONY : src/ui/graphics_example.obj
+
+# target to build an object file
+src/ui/graphics_example.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/graphics_example.cpp.obj
+.PHONY : src/ui/graphics_example.cpp.obj
+
+src/ui/graphics_example.i: src/ui/graphics_example.cpp.i
+.PHONY : src/ui/graphics_example.i
+
+# target to preprocess a source file
+src/ui/graphics_example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/graphics_example.cpp.i
+.PHONY : src/ui/graphics_example.cpp.i
+
+src/ui/graphics_example.s: src/ui/graphics_example.cpp.s
+.PHONY : src/ui/graphics_example.s
+
+# target to generate assembly for a file
+src/ui/graphics_example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/graphics_example.cpp.s
+.PHONY : src/ui/graphics_example.cpp.s
+
+src/ui/logger.obj: src/ui/logger.cpp.obj
+.PHONY : src/ui/logger.obj
+
+# target to build an object file
+src/ui/logger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/logger.cpp.obj
+.PHONY : src/ui/logger.cpp.obj
+
+src/ui/logger.i: src/ui/logger.cpp.i
+.PHONY : src/ui/logger.i
+
+# target to preprocess a source file
+src/ui/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/logger.cpp.i
+.PHONY : src/ui/logger.cpp.i
+
+src/ui/logger.s: src/ui/logger.cpp.s
+.PHONY : src/ui/logger.s
+
+# target to generate assembly for a file
+src/ui/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/logger.cpp.s
+.PHONY : src/ui/logger.cpp.s
+
+src/ui/ui.obj: src/ui/ui.cpp.obj
+.PHONY : src/ui/ui.obj
+
+# target to build an object file
+src/ui/ui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/ui.cpp.obj
+.PHONY : src/ui/ui.cpp.obj
+
+src/ui/ui.i: src/ui/ui.cpp.i
+.PHONY : src/ui/ui.i
+
+# target to preprocess a source file
+src/ui/ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/ui.cpp.i
+.PHONY : src/ui/ui.cpp.i
+
+src/ui/ui.s: src/ui/ui.cpp.s
+.PHONY : src/ui/ui.s
+
+# target to generate assembly for a file
+src/ui/ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrbitSimulator.dir\build.make CMakeFiles/OrbitSimulator.dir/src/ui/ui.cpp.s
+.PHONY : src/ui/ui.cpp.s
 
 # Help Target
 help:
@@ -281,6 +377,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... OrbitSimulator
+	@echo ... src/barnes-hut/barneshut.obj
+	@echo ... src/barnes-hut/barneshut.i
+	@echo ... src/barnes-hut/barneshut.s
 	@echo ... src/barnes-hut/object.obj
 	@echo ... src/barnes-hut/object.i
 	@echo ... src/barnes-hut/object.s
@@ -296,9 +395,18 @@ help:
 	@echo ... src/init_universe.obj
 	@echo ... src/init_universe.i
 	@echo ... src/init_universe.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... src/ui/app.obj
+	@echo ... src/ui/app.i
+	@echo ... src/ui/app.s
+	@echo ... src/ui/graphics_example.obj
+	@echo ... src/ui/graphics_example.i
+	@echo ... src/ui/graphics_example.s
+	@echo ... src/ui/logger.obj
+	@echo ... src/ui/logger.i
+	@echo ... src/ui/logger.s
+	@echo ... src/ui/ui.obj
+	@echo ... src/ui/ui.i
+	@echo ... src/ui/ui.s
 .PHONY : help
 
 

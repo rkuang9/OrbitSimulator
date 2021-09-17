@@ -7,11 +7,12 @@
 
 namespace space
 {
-    sQuadtree::sQuadtree()
+    sQuadtree::sQuadtree(double width)
     {
+        this->width = width;
+
         // create root quadrant
-        this->root = new sQuadrant(sPoint(0, 0), 100, nullptr);
-        //this->root = new sQuadrant(sPoint(0, 0), 1921.56 * constants::AU, nullptr);
+        this->root = new sQuadrant(sPoint(0, 0), width, nullptr);
 
         // create initial COM object
         sObject *root_com = new sObject(sPoint(0, 0), 0, 0, "Root COM");
@@ -23,7 +24,7 @@ namespace space
     }
 
 
-    sQuadtree::sQuadtree(space::list<sObject *> &universe) : sQuadtree()
+    sQuadtree::sQuadtree(double width, space::list<sObject *> &universe) : sQuadtree(width)
     {
         for (int i = 0; i < universe.size(); i++) {
             this->Insert(universe[i]);
@@ -95,7 +96,7 @@ namespace space
             this->current = this->current->GetQuadrant(quadrant);
         }
 
-        this->Insert(new_object); // should run the initial if-block of this function
+        this->Insert(new_object);
     }
 
 
@@ -108,7 +109,7 @@ namespace space
         // current quadrant's object is normal object, convert it to COM
         sObject *detached = this->current->GetObject();
 
-        sObject *com = new sObject(sPoint(0, 0), 0, 0, "Root COM");
+        sObject *com = new sObject(sPoint(0, 0), 0, 0, "COM");
         com->SetIsCOM(true);
 
         this->current->SetObject(*com);

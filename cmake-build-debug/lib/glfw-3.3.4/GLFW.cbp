@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GLFW"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\glfw-3.3.4\;CMake Files\lib\glfw-3.3.4\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/include"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/include"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/lib/glfw-3.3.4/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/egl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/osmesa_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/wgl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/wgl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/win32_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/lib/glfw-3.3.4/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\lib\glfw-3.3.4\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

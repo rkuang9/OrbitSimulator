@@ -32,7 +32,7 @@ namespace space {
         // center coordinate of the quadrant
         sPoint center;
 
-        // length of the sqare quadrant
+        // length of the square quadrant
         double length = NAN;
         double quarter_length = NAN;
 
@@ -58,7 +58,7 @@ namespace space {
         /**
          * @return   the qudrant's sPoint, the center
          */
-        sPoint GetPoint();
+        sPoint GetPoint() const;
 
         /**
          * @return   a pointer to the quadrant's parent
@@ -94,6 +94,7 @@ namespace space {
          * @return   a pointer to the quadrant's object
          */
         sObject *GetObject();
+        sObject *GetObject() const;
 
         /**
          * Add a heap allocated sObject to a sub-quadrant
@@ -113,7 +114,6 @@ namespace space {
          * @return   a pointer to the quadrant which contains the new sub-quadrants
          */
         sQuadrant *NewSubQuadrant(int subquadrant);
-
     };
 }
 

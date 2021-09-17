@@ -21,6 +21,7 @@ namespace space
 
         int size = 0;
         int height = 0;
+        double width = 0;
 
         void PointCurrentTo(sQuadrant *point_to);
 
@@ -31,9 +32,9 @@ namespace space
         void ClearQuadrant(int quadrant);
 
     public:
-        sQuadtree();
+        explicit sQuadtree(double width);
 
-        sQuadtree(space::list<sObject *> &universe);
+        sQuadtree(double width, space::list<sObject *> &universe);
 
         sQuadrant *GetRoot();
 

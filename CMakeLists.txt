@@ -6,24 +6,31 @@ add_compile_definitions(_USE_MATH_DEFINES)
 
 # Determine compiler
 #if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-	#set(BUILD "msvc-static")
-	#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+#set(BUILD "msvc-static")
+#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 #elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-	#set(BUILD "static-debug")
+#set(BUILD "static-debug")
 #endif()
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 SET(CMAKE_BUILD_TYPE Release)
-set(SRC_FILES "include/simulator_includes.h"
-        src/main.cpp
+set(SRC_FILES
+        # user interface
+        src/ui/app.cpp include/ui/app.h
+        src/ui/ui.cpp include/ui/ui.h
+        src/ui/logger.cpp include/ui/logger.h
+        src/ui/graphics_example.cpp include/ui/graphics_example.h
+
+        # containers, includes, helpers
+        include/simulator_includes.h
         src/init_universe.cpp
-        src/barnes-hut/object.cpp include/barnes-hut/object.hpp
-        src/barnes-hut/quadtree.cpp include/barnes-hut/quadtree.hpp
         include/list.hpp
-        #src/ui/app.cpp include/ui/app.h
-        #src/ui/ui.cpp include/ui/ui.h
-        #src/ui/logger.cpp include/ui/logger.h
-        src/barnes-hut/quadrant.cpp include/barnes-hut/quadrant.hpp
+
+        # barnes-hut algorithm
         src/barnes-hut/point.cpp include/barnes-hut/point.hpp
+        src/barnes-hut/object.cpp include/barnes-hut/object.hpp
+        src/barnes-hut/quadrant.cpp include/barnes-hut/quadrant.hpp
+        src/barnes-hut/quadtree.cpp include/barnes-hut/quadtree.hpp
+        src/barnes-hut/barneshut.cpp include/barnes-hut/barneshut.hpp
         )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin) # compiled executable goes into /bin
@@ -34,16 +41,18 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin) # compiled e
 set(CMAKE_CXX_STANDARD_LIBRARIES "${CMAKE_CXX_STANDARD_LIBRARIES} -static") #-static-libgcc -static-libstdc++  -mwindows
 
 # Location of wxWidgets library
-#set(wxWidgets_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/wxWidgets-3.1.5-static-release/${BUILD})
+set(wxWidgets_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/wxWidgets-3.1.5-static-release/${BUILD})
 
 # Request the required wxWidgets libs
-#find_package(wxWidgets 3.1 COMPONENTS gl core base OPTIONAL_COMPONENTS net)
+find_package(wxWidgets 3.1 COMPONENTS gl core base OPTIONAL_COMPONENTS net)
 
 set(wxBUILD_USE_STATIC_RUNTIME ON)
 
 # Include the wxWidgets use file to initialize various settings
-#include(${wxWidgets_USE_FILE})
+include(${wxWidgets_USE_FILE})
 
+# treat project source directory as the system include directory so that
+# including files is relative to project folder instead of file system
 include_directories(SYSTEM ${CMAKE_CURRENT_SOURCE_DIR})
 
 # clang-tidy options taken from CLion
@@ -53,6 +62,7 @@ include_directories(SYSTEM ${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 # Link required libraries to the executable
-#target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${wxWidgets_LIBRARIES})
+
 
 

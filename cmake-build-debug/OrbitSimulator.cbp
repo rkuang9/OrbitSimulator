@@ -25,6 +25,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-D_UNICODE"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/wxWidgets-3.1.5-static-release/lib/gcc_lib/mswu"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/wxWidgets-3.1.5-static-release/include"/>
 					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
@@ -49,6 +53,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_USE_MATH_DEFINES"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-D_UNICODE"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/wxWidgets-3.1.5-static-release/lib/gcc_lib/mswu"/>
+					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator/lib/wxWidgets-3.1.5-static-release/include"/>
 					<Add directory="C:/Users/Macross/Desktop/OrbitSimulator"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/../../../../include/c++/10.3.0/x86_64-w64-mingw32"/>
@@ -86,6 +94,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/barneshut.hpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/barnes-hut/object.hpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
@@ -104,6 +115,21 @@
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/simulator_includes.h">
 			<Option target="OrbitSimulator"/>
 		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/ui/app.h">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/ui/graphics_example.h">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/ui/logger.h">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/include/ui/ui.h">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/barneshut.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/barnes-hut/object.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
@@ -119,7 +145,16 @@
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/init_universe.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
-		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/main.cpp">
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/ui/app.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/ui/graphics_example.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/ui/logger.cpp">
+			<Option target="OrbitSimulator"/>
+		</Unit>
+		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/src/ui/ui.cpp">
 			<Option target="OrbitSimulator"/>
 		</Unit>
 		<Unit filename="C:/Users/Macross/Desktop/OrbitSimulator/CMakeLists.txt">

@@ -22,7 +22,10 @@ namespace space
         double velocity = NAN;
         double accel = NAN;
         double momentum = NAN;
-        double force = NAN;
+        double net_force = 0.00;
+        double net_force_x = 0.00;
+        double net_force_y = 0.00;
+
 
         bool is_com = false;
 
@@ -46,9 +49,9 @@ namespace space
         void UpdateCOM(sObject &object);
 
         // formulas
-        double GetForce(const sObject &other_object) const;
+        double GetForce(const sObject &other_object);
 
-        bool IsCOM();
+        void UpdateForce(const sObject &other_object);
 
         /** Getters and Setters */
         double GetMass() const;
@@ -59,6 +62,8 @@ namespace space
 
         double GetY();
 
+        double GetNetForce();
+
         void SetX(double x);
 
         void SetY(double y);
@@ -68,6 +73,8 @@ namespace space
         sPoint &GetPoint();
 
         void SetPoint(sPoint &point);
+
+        bool IsCOM();
 
         void SetIsCOM(bool is_parent);
     };

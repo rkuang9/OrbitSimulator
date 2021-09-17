@@ -1052,3 +1052,138 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b978d/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b978d.dir\build.make CMakeFiles/cmTC_b978d.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b978d.dir/CheckIncludeFile.c.obj
+C:\msys64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_b978d.dir\CheckIncludeFile.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_b978d.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b978d.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_b978d.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_b978d.dir/objects.a @CMakeFiles\cmTC_b978d.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_b978d.dir/objects.a -Wl,--no-whole-archive -o cmTC_b978d.exe -Wl,--out-implib,libcmTC_b978d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b978d.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_73280/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_73280.dir\build.make CMakeFiles/cmTC_73280.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73280.dir/src.c.obj
+C:\msys64\mingw64\bin\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_73280.dir\src.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_73280.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_73280.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_73280.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_73280.dir/objects.a @CMakeFiles\cmTC_73280.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_73280.dir/objects.a -Wl,--no-whole-archive -o cmTC_73280.exe -Wl,--out-implib,libcmTC_73280.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_73280.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file dinput.h exists passed with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_33edf/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_33edf.dir\build.make CMakeFiles/cmTC_33edf.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33edf.dir/CheckIncludeFile.c.obj
+C:\msys64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_33edf.dir\CheckIncludeFile.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_33edf.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_33edf.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_33edf.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_33edf.dir/objects.a @CMakeFiles\cmTC_33edf.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_33edf.dir/objects.a -Wl,--no-whole-archive -o cmTC_33edf.exe -Wl,--out-implib,libcmTC_33edf.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_33edf.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file xinput.h exists passed with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b4c82/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b4c82.dir\build.make CMakeFiles/cmTC_b4c82.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b4c82.dir/CheckIncludeFile.c.obj
+C:\msys64\mingw64\bin\gcc.exe    -o CMakeFiles\cmTC_b4c82.dir\CheckIncludeFile.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_b4c82.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b4c82.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_b4c82.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_b4c82.dir/objects.a @CMakeFiles\cmTC_b4c82.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_b4c82.dir/objects.a -Wl,--no-whole-archive -o cmTC_b4c82.exe -Wl,--out-implib,libcmTC_b4c82.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b4c82.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test _GLFW_HAS_DEP succeeded with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bca22/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_bca22.dir\build.make CMakeFiles/cmTC_bca22.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bca22.dir/src.c.obj
+C:\msys64\mingw64\bin\gcc.exe -D_GLFW_HAS_DEP  -Wl,--nxcompat -o CMakeFiles\cmTC_bca22.dir\src.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_bca22.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_bca22.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_bca22.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_bca22.dir/objects.a @CMakeFiles\cmTC_bca22.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe  -Wl,--nxcompat -Wl,--whole-archive CMakeFiles\cmTC_bca22.dir/objects.a -Wl,--no-whole-archive -o cmTC_bca22.exe -Wl,--out-implib,libcmTC_bca22.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_bca22.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test _GLFW_HAS_ASLR succeeded with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_1bfc4/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_1bfc4.dir\build.make CMakeFiles/cmTC_1bfc4.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1bfc4.dir/src.c.obj
+C:\msys64\mingw64\bin\gcc.exe -D_GLFW_HAS_ASLR  -Wl,--dynamicbase -o CMakeFiles\cmTC_1bfc4.dir\src.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_1bfc4.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1bfc4.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_1bfc4.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_1bfc4.dir/objects.a @CMakeFiles\cmTC_1bfc4.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe  -Wl,--dynamicbase -Wl,--whole-archive CMakeFiles\cmTC_1bfc4.dir/objects.a -Wl,--no-whole-archive -o cmTC_1bfc4.exe -Wl,--out-implib,libcmTC_1bfc4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1bfc4.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test _GLFW_HAS_64ASLR succeeded with the following output:
+Change Dir: C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_16550/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_16550.dir\build.make CMakeFiles/cmTC_16550.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16550.dir/src.c.obj
+C:\msys64\mingw64\bin\gcc.exe -D_GLFW_HAS_64ASLR  -Wl,--high-entropy-va -o CMakeFiles\cmTC_16550.dir\src.c.obj -c C:\Users\Macross\Desktop\OrbitSimulator\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_16550.exe
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_16550.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_16550.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\cmTC_16550.dir/objects.a @CMakeFiles\cmTC_16550.dir\objects1.rsp
+C:\msys64\mingw64\bin\gcc.exe  -Wl,--high-entropy-va -Wl,--whole-archive CMakeFiles\cmTC_16550.dir/objects.a -Wl,--no-whole-archive -o cmTC_16550.exe -Wl,--out-implib,libcmTC_16550.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_16550.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'C:/Users/Macross/Desktop/OrbitSimulator/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }

@@ -21,7 +21,7 @@ namespace space
     }
 
 
-    sPoint sQuadrant::GetPoint()
+    sPoint sQuadrant::GetPoint() const
     {
         return this->center;
     }
@@ -70,6 +70,12 @@ namespace space
     }
 
 
+    sObject *sQuadrant::GetObject() const
+    {
+        return this->object;
+    }
+
+
     void sQuadrant::SetObject(sObject &_object)
     {
         this->object = &_object;
@@ -87,34 +93,40 @@ namespace space
     sQuadrant *sQuadrant::NewSubQuadrant(int subquadrant)
     {
         if (this->object == nullptr) {
-            std::cout << "The current quadrant does not contain an object, a subquadrant was not created\n";
+            throw std::invalid_argument(
+                    "The current quadrant does not contain an object, a subquadrant was not created");
+            return nullptr;
         }
 
         if (this->quadrant[subquadrant] != nullptr) {
-            std::cout << Quadrant(subquadrant) << " subquadrant already exists\n";
+            throw std::invalid_argument(std::to_string(subquadrant) + " subquadrant already exists");
         }
 
         if (subquadrant == NORTH_WEST) {
             this->quadrant[subquadrant] = new sQuadrant(
-                    sPoint(this->center.GetX() - this->quarter_length, this->center.GetY() + quarter_length),
+                    sPoint(this->center.GetX() - this->quarter_length,
+                           this->center.GetY() + this->quarter_length),
                     this->length / 2,
                     this);
         }
         else if (subquadrant == NORTH_EAST) {
             this->quadrant[subquadrant] = new sQuadrant(
-                    sPoint(this->center.GetX() + this->quarter_length, this->center.GetY() + quarter_length),
+                    sPoint(this->center.GetX() + this->quarter_length,
+                           this->center.GetY() + this->quarter_length),
                     this->length / 2,
                     this);
         }
         else if (subquadrant == SOUTH_WEST) {
             this->quadrant[subquadrant] = new sQuadrant(
-                    sPoint(this->center.GetX() - this->quarter_length, this->center.GetY() - quarter_length),
+                    sPoint(this->center.GetX() - this->quarter_length,
+                           this->center.GetY() - this->quarter_length),
                     this->length / 2,
                     this);
         }
         else { // SOUTH_EAST
             this->quadrant[subquadrant] = new sQuadrant(
-                    sPoint(this->center.GetX() + this->quarter_length, this->center.GetY() - quarter_length),
+                    sPoint(this->center.GetX() + this->quarter_length,
+                           this->center.GetY() - this->quarter_length),
                     this->length / 2,
                     this);
         }
